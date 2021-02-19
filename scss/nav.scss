@@ -1,0 +1,41 @@
+nav {
+  height: 100px;
+  width: 77%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+
+  .linksWhite {
+    width: 525px;
+    margin-right: 25px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    a {
+      font-size: $mainFont21;
+      font-family: $mainType;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  .linksBlack {
+    width: 525px;
+    font-size: 15px;
+    font-family: $mainType;
+    margin-right: 25px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    a {
+      font-size: $mainFont21;
+      font-family: $mainType;
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  p {
+    font-size: $mainFont21;
+    color: $blue;
+  }
+}
