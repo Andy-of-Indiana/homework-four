@@ -1,6 +1,6 @@
 .homeBG {
   height: 500px;
-  width: 100%;
+  max-width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
   .homeTitle {
     height: 245px;
-    width: 675px;
+    max-width: 675px;
     text-align: center;
     margin: 0 auto;
     margin-top: 55px;
@@ -29,10 +29,11 @@
 }
 
 .homeBookingLinks {
-  height: 300px;
-  width: 64%;
+  min-height: 300px;
+  max-width: 64%;
   margin: -50px auto 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   .homeTour {
@@ -70,12 +71,12 @@
 }
 
 .homeContent {
-  height: 900px;
+  min-height: 900px;
   width: 100%;
   margin-top: 40px;
 
   .bookingForm {
-    height: 730px;
+    min-height: 730px;
     width: auto;
   }
   .bookingForm h1 {
@@ -89,6 +90,7 @@
     width: auto;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 
@@ -145,7 +147,7 @@
     }
     .textBoxOuter {
       height: auto;
-      width: 15%;
+      width: 130px;
       display: flex;
       justify-content: left;
       align-items: center;
@@ -155,6 +157,7 @@
       font-family: $mainType;
       margin-top: 10px;
       margin-left: 20px;
+      text-overflow: ellipsis;
     }
     .textBoxCheck {
       height: auto;
@@ -182,16 +185,15 @@
   }
 
   .bookingFormQuanity {
-    height: 60px;
-    width: auto;
+    min-height: 60px;
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 
     .bookingFormQuanityCol {
-      height: 60px;
+      height: auto;
       width: 136px;
-      display: flex;
     }
     .textBoxOuterTwo {
       height: auto;
@@ -208,7 +210,7 @@
     }
     .textBoxQuanity {
       height: auto;
-      width: 100px;
+      width: 75%;
       border: 1px $blue solid;
       display: flex;
       justify-content: space-between;
@@ -244,6 +246,43 @@
     font-family: $mainType;
     margin-top: 10px;
     margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .homeBG {
+    height: 575px;
+
+    .homeTitle {
+      margin-top: 125px;
+
+      .bookingFormQuanityCol {
+        height: auto;
+        width: 136px;
+      }
+    }
+  }
+  .homeContent {
+    margin-bottom: 125px;
+    .bookingFormQuanity {
+      max-width: 275px;
+      flex-wrap: wrap;
+      .bookingFormQuanityCol {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1145px) {
+  .homeBookingLinks {
+    width: 240px;
+    flex-direction: center;
+    padding-left: 0;
+    padding-right: 0;
+
+    .homeTour {
+      margin-bottom: 30px;
+    }
   }
 }
 

@@ -25,17 +25,18 @@ p {
 }
 
 nav {
-  height: 100px;
+  max-height: 100px;
   width: 77%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: transparent;
 }
 nav .linksWhite {
-  width: 525px;
+  min-width: 525px;
   margin-right: 25px;
-  padding: 45px 0;
+  padding: 40px 0;
   display: flex;
   justify-content: space-around;
 }
@@ -46,9 +47,7 @@ nav .linksWhite a {
   color: white;
 }
 nav .linksBlack {
-  width: 525px;
-  font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 525px;
   margin-right: 25px;
   padding: 45px 0;
   display: flex;
@@ -78,8 +77,8 @@ nav p {
 
 .whiteLine {
   height: 2px;
-  width: 77%;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: -25px;
   background: white;
 }
 
@@ -96,8 +95,8 @@ nav p {
 
 .blackLine {
   height: 2px;
-  width: 77%;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: -25px;
   background: black;
 }
 
@@ -114,7 +113,7 @@ nav p {
 }
 
 .footer {
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   background-color: #79addc;
 }
@@ -125,23 +124,42 @@ nav p {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .sideBottom {
   height: auto;
-  width: 20%;
+  width: 200px;
 }
 .sideBottom .socialMedia {
   height: 30px;
-  width: 150px;
+  width: 140px;
   margin-top: 25px;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
+}
+.sideBottom .socialMedia .facebook {
+  height: 30px;
+  width: 30px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../assets/images/SocialMedia.jpg);
+  background-image: url(../assets/images/facebook.png);
+}
+.sideBottom .socialMedia .instagram {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/instagram.png);
+}
+.sideBottom .socialMedia .twitter {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/twitter.png);
 }
 
 .bottomText {
@@ -157,6 +175,36 @@ nav p {
   color: white;
 }
 
+@media only screen and (max-width: 950px) {
+  .logoWhite {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .logoBlack {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .footer {
+    height: 250px;
+  }
+
+  .bottom {
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .socialMedia {
+    margin: 0 auto;
+  }
+
+  .bottomText {
+    width: 80%;
+  }
+}
 .buttonSquare {
   height: 40px;
   width: 120px;
@@ -207,7 +255,7 @@ nav p {
 
 .homeBG {
   height: 500px;
-  width: 100%;
+  max-width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -215,7 +263,7 @@ nav p {
 }
 .homeBG .homeTitle {
   height: 245px;
-  width: 675px;
+  max-width: 675px;
   text-align: center;
   margin: 0 auto;
   margin-top: 55px;
@@ -234,10 +282,11 @@ nav p {
 }
 
 .homeBookingLinks {
-  height: 300px;
-  width: 64%;
+  min-height: 300px;
+  max-width: 64%;
   margin: -50px auto 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .homeBookingLinks .homeTour {
@@ -271,12 +320,12 @@ nav p {
 }
 
 .homeContent {
-  height: 900px;
+  min-height: 900px;
   width: 100%;
   margin-top: 40px;
 }
 .homeContent .bookingForm {
-  height: 730px;
+  min-height: 730px;
   width: auto;
 }
 .homeContent .bookingForm h1 {
@@ -289,6 +338,7 @@ nav p {
   width: auto;
   margin-bottom: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -342,7 +392,7 @@ nav p {
 }
 .homeContent .bookingFormCheck .textBoxOuter {
   height: auto;
-  width: 15%;
+  width: 130px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -352,6 +402,7 @@ nav p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 10px;
   margin-left: 20px;
+  text-overflow: ellipsis;
 }
 .homeContent .bookingFormCheck .textBoxCheck {
   height: auto;
@@ -377,16 +428,15 @@ nav p {
   background-image: url(../assets/images/calendar.svg);
 }
 .homeContent .bookingFormQuanity {
-  height: 60px;
-  width: auto;
+  min-height: 60px;
+  width: 100%;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
 .homeContent .bookingFormQuanity .bookingFormQuanityCol {
-  height: 60px;
+  height: auto;
   width: 136px;
-  display: flex;
 }
 .homeContent .bookingFormQuanity .textBoxOuterTwo {
   height: auto;
@@ -403,7 +453,7 @@ nav p {
 }
 .homeContent .bookingFormQuanity .textBoxQuanity {
   height: auto;
-  width: 100px;
+  width: 75%;
   border: 1px #79addc solid;
   display: flex;
   justify-content: space-between;
@@ -439,6 +489,40 @@ nav p {
   margin-left: 20px;
 }
 
+@media only screen and (max-width: 950px) {
+  .homeBG {
+    height: 575px;
+  }
+  .homeBG .homeTitle {
+    margin-top: 125px;
+  }
+  .homeBG .homeTitle .bookingFormQuanityCol {
+    height: auto;
+    width: 136px;
+  }
+
+  .homeContent {
+    margin-bottom: 125px;
+  }
+  .homeContent .bookingFormQuanity {
+    max-width: 275px;
+    flex-wrap: wrap;
+  }
+  .homeContent .bookingFormQuanity .bookingFormQuanityCol {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1145px) {
+  .homeBookingLinks {
+    width: 240px;
+    flex-direction: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .homeBookingLinks .homeTour {
+    margin-bottom: 30px;
+  }
+}
 @font-face {
   font-family: proxNovaLight;
   src: url(../assets/fonts/Proxima-Nova-Thin.ttf);

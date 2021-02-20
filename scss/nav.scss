@@ -1,15 +1,16 @@
 nav {
-  height: 100px;
+  max-height: 100px;
   width: 77%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: transparent;
 
   .linksWhite {
-    width: 525px;
+    min-width: 525px;
     margin-right: 25px;
-    padding: 45px 0;
+    padding: 40px 0;
     display: flex;
     justify-content: space-around;
     a {
@@ -20,9 +21,7 @@ nav {
     }
   }
   .linksBlack {
-    width: 525px;
-    font-size: 15px;
-    font-family: $mainType;
+    min-width: 525px;
     margin-right: 25px;
     padding: 45px 0;
     display: flex;
